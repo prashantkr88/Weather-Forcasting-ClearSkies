@@ -1,0 +1,276 @@
+
+
+h2 {
+    color: #002366;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+    cursor: pointer;
+}
+
+h2:hover {
+    transform: scale(1.20);
+    color: #0D1B2A;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0.5px;
+    background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    gap: 50px;
+}
+
+#navbar li {
+    list-style: none;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0D1B2A;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 30%;
+    transition: width 0.3s ease;
+}
+
+#hero {
+    position: relative;
+    background: linear-gradient(180deg, #B0E0E6 0%, #ffffff 80%);
+    padding: 100px 20px 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    color: #002366;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    animation: floatHeading 4s ease-in-out infinite;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #0d1b2a;
+    margin-bottom: 35px;
+}
+
+.hero-content a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content a:first-of-type {
+    background-color: #088178;
+    color: white;
+}
+
+.hero-content a:first-of-type:hover {
+    background-color: #066b63;
+    transform: scale(1.1);
+}
+
+.hero-content a:last-of-type {
+    border: 2px solid #088178;
+    color: #088178;
+    background-color: transparent;
+}
+
+.hero-content a:last-of-type:hover {
+    background-color: #088178;
+    color: white;
+    transform: scale(1.1);
+}
+
+@keyframes floatHeading {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://svgshare.com/i/xVb.svg') repeat-x;
+    background-size: contain;
+    animation: moveClouds 60s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes moveClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* New Styles for Added Features */
+
+/* Current Weather Card */
+.temp-display {
+    margin-top: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.weather-main #weather-icon {
+    font-size: 2.5em;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.weather-main p {
+    margin: 0;
+    font-size: 18px;
+    color: #0d1b2a;
+}
+
+#current-temp {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.weather-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d1b2a;
+}
+
+/* Weather Alerts Section */
+.weather-alerts {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.weather-alerts:hover {
+    transform: translateY(-5px);
+}
+
+.weather-alerts h3 {
+    font-size: 20px;
+    color: #e74c3c;
+    margin: 0 0 10px;
+}
+
+#alerts {
+    font-size: 16px;
+    color: #0d1b2a;
+}
+
+/* 5-Day Forecast Section */
+.forecast-section {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.forecast-section h3 {
+    font-size: 24px;
+    color: #002366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d1b2a;
+}
+
+.forecast-card .weather-icon {
+    font-size: 2em;
+    animation: pulse 2s infinite;
+}
+
+#live-temp.show {
+    opacity: 1;
+}

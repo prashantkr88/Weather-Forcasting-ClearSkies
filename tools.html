@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - ClearSkies</title>
+    <link rel="stylesheet" href="stylees.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header" role="banner">
+        <div class="logo" aria-label="ClearSkies Logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sun Icon" width="40">
+            <h1>ClearSkies</h1>
+        </div>
+        <nav role="navigation">
+            <ul id="navbar">
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="planner.html" aria-label="Planner">Planner</a></li>
+                <li><a href="weather-report.html" aria-label="Weather Report">Weather Report</a></li>
+                <li><a href="tools.html" class="active" aria-label="Tools">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tools" aria-label="Tools Section">
+            <h2>Useful Tools 🌟</h2>
+            <div class="tools-container">
+                <!-- Weather Converter Card -->
+                <div class="tools-card weather-converter">
+                    <h3>Weather Converter <i class="fas fa-exchange-alt"></i></h3>
+                    <p>Convert temperature between Celsius, Fahrenheit, and Kelvin.</p>
+                    <div class="tool-input">
+                        <input type="number" id="temp-input" placeholder="Enter temperature..." aria-label="Temperature Input">
+                        <select id="unit-from" aria-label="From Unit">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <select id="unit-to" aria-label="To Unit">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <button id="convert-btn" aria-label="Convert Temperature"><i class="fas fa-sync"></i> Convert</button>
+                    </div>
+                    <p id="converted-result">Result: -</p>
+                </div>
+
+                <!-- UV Index Calculator Card -->
+                <div class="tools-card uv-calculator">
+                    <h3>UV Index Calculator <i class="fas fa-sun"></i></h3>
+                    <p>Calculate UV Index based on location and time.</p>
+                    <div class="tool-input">
+                        <input type="text" id="uv-location" placeholder="Enter location..." aria-label="Location Input">
+                        <input type="time" id="uv-time" aria-label="Time Input">
+                        <button id="calc-uv-btn" aria-label="Calculate UV Index"><i class="fas fa-calculator"></i> Calculate</button>
+                    </div>
+                    <p id="uv-result">UV Index: -</p>
+                </div>
+
+                <!-- AQI Calculator Card -->
+                <div class="tools-card aqi-calculator">
+                    <h3>AQI Calculator <i class="fas fa-wind"></i></h3>
+                    <p>Estimate Air Quality Index based on location.</p>
+                    <div class="tool-input">
+                        <input type="text" id="aqi-location" placeholder="Enter location..." aria-label="AQI Location Input">
+                        <button id="calc-aqi-btn" aria-label="Calculate AQI"><i class="fas fa-calculator"></i> Calculate</button>
+                    </div>
+                    <p id="aqi-result">AQI: -</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="tools.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report - ClearSkies</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header" role="banner">
+        <div class="logo" aria-label="ClearSkies Logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sun Icon" width="40">
+            <h1>ClearSkies</h1>
+        </div>
+        <nav role="navigation">
+            <ul id="navbar">
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="planner.html" aria-label="Planner">Planner</a></li>
+                <li><a href="weather-report.html" class="active" aria-label="Weather Report">Weather Report</a></li>
+                <li><a href="tools.html" aria-label="Tools">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="weather-report" aria-label="Weather Report Section">
+            <h2>Weather Report 🌤️</h2>
+            <div class="weather-container">
+                <!-- Current Weather Card -->
+                <div class="weather-card current-weather">
+                    <h3>Current Weather <i class="fas fa-cloud-sun"></i></h3>
+                    <p>Location: <span id="current-location">Pune</span></p>
+                    <p>Temperature: <span id="current-temp">Loading...</span>°C <i class="fas fa-thermometer-half"></i></p>
+                    <p>Condition: <span id="current-condition">Loading...</span> <i class="fas fa-sun"></i></p>
+                    <p>Humidity: <span id="current-humidity">Loading...</span>% <i class="fas fa-tint"></i></p>
+                    <p>Wind Speed: <span id="current-wind">Loading...</span> km/h <i class="fas fa-wind"></i></p>
+                    <div class="sunrise-sunset">
+                        <p>Sunrise: <span id="sunrise">Loading...</span> <i class="fas fa-sunrise"></i></p>
+                        <p>Sunset: <span id="sunset">Loading...</span> <i class="fas fa-sunset"></i></p>
+                    </div>
+                    <p>Air Quality: <span id="aqi">Loading...</span> <i class="fas fa-smog"></i></p>
+                </div>
+
+                <!-- 5-Day Forecast Card -->
+                <div class="weather-card forecast">
+                    <h3>5-Day Forecast <i class="fas fa-calendar-alt"></i></h3>
+                    <div id="forecast-list" class="forecast-list"></div>
+                </div>
+
+                <!-- Weather Alerts Card -->
+                <div class="weather-card weather-alerts">
+                    <h3>Weather Alerts <i class="fas fa-exclamation-triangle"></i></h3>
+                    <p id="alerts">No active alerts...</p>
+                </div>
+
+                <!-- Air Quality Index Card -->
+                <div class="weather-card air-quality-card">
+                    <h3>Air Quality Index <i class="fas fa-wind"></i></h3>
+                    <p>Location: <span id="aqi-location">Pune</span></p>
+                    <p>Published at: <span id="aqi-time">pm 8:30</span></p>
+                    <div class="aqi-display">
+                        <span id="aqi-value">100</span>
+                        <span id="aqi-category">Moderate</span>
+                    </div>
+                    <p>The concentration of PM2.5 in the air outside is high. Wear a mask when you go out.</p>
+                    <div class="pollutants">
+                        <span>PM2.5: <span id="pm25">100.3</span></span>
+                        <span>PM10: <span id="pm10">73.6</span></span>
+                        <span>SO₂: <span id="so2">8.3</span></span>
+                        <span>NO₂: <span id="no2">34.2</span></span>
+                        <span>O₃: <span id="o3">11.6</span></span>
+                        <span>CO: <span id="co">2.0</span></span>
+                    </div>
+                    <p><a href="#" class="map-link">More on air quality</a></p>
+                </div>
+
+                <!-- Weather Map Card -->
+                <div class="weather-card weather-map">
+                    <h3>Weather Map <i class="fas fa-map-marked-alt"></i></h3>
+                    <p><a href="https://www.wunderground.com/maps" target="_blank" class="map-link">View Full Map</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="weather-report.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearSkies</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header id="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Logo" width="80">
+        <h2>ClearSkies</h2>
+        <ul id="navbar">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="weather-report.html">Weather Report</a></li>
+            <li><a href="tools.html">Tools</a></li>
+        </ul>
+    </header>
+    
+        <!-- Rest of the header (navbar) would go here -->
+    </header>
+    <section id="hero">
+        <div class="hero-clouds"></div>
+        <div class="hero-content">
+            <h1>Plan Your Day with Confidence 🌞</h1>
+            <p>Accurate forecasts, personal planners, and all the tools you need — right here.</p>
+        </div>
+
+        <!-- Current Weather with Additional Details -->
+        <div id="live-temp" class="temp-display">
+            <div class="weather-card">
+                <div class="weather-main">
+                    <span id="weather-icon">🌡️</span>
+                    <div>
+                        <p>Current Weather in <strong>Pune</strong></p>
+                        <p id="current-temp">Loading...</p>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <p id="weather-desc">Description: Loading...</p>
+                    <p id="humidity">Humidity: Loading...</p>
+                    <p id="wind-speed">Wind Speed: Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather Alerts Section -->
+        <div class="weather-alerts">
+            <h3>Weather Alerts ⚠️</h3>
+            <div id="alerts">Loading alerts...</div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div class="forecast-section">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast" class="forecast-container">
+                <p>Loading forecast...</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

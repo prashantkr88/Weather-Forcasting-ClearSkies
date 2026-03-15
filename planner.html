@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner - ClearSkies</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    <header id="header" role="banner">
+        <div class="logo" aria-label="ClearSkies Logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sun Icon" width="40">
+            <h1>ClearSkies</h1>
+        </div>
+        <nav role="navigation">
+            <ul id="navbar">
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="planner.html" class="active" aria-label="Planner">Planner</a></li>
+                <li><a href="weather-report.html" aria-label="Weather Report">Weather Report</a></li>
+                <li><a href="tools.html" aria-label="Tools">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="planner" aria-label="Planner Section">
+            <h2>Plan Your Day with ClearSkies 🌟</h2>
+            <div class="planner-container">
+                <!-- Activity Suggestions Card -->
+                <div class="planner-card suggestions">
+                    <h3>Activity Ideas <i class="fas fa-lightbulb"></i></h3>
+                    <p id="suggestion-text">Add a task to get personalized activity suggestions!</p>
+                </div>
+
+                <!-- Task List Card -->
+                <div class="planner-card task-section">
+                    <h3>Your Tasks <i class="fas fa-tasks"></i></h3>
+                    <div class="task-input">
+                        <input type="text" id="user-name" placeholder="Your Name..." aria-label="User Name">
+                        <input type="text" id="task-input" placeholder="Task (e.g., Plan a fun day)..." aria-label="Task Input">
+                        <select id="task-day" aria-label="Select Day">
+                            <option value="0">Today</option>
+                            <option value="1">Tomorrow</option>
+                            <option value="2">Day After Tomorrow</option>
+                            <option value="3">In 3 Days</option>
+                            <option value="4">In 4 Days</option>
+                        </select>
+                        <button id="add-task-btn" aria-label="Add Task"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                    <p id="error-message" class="error-message" style="display: none;"></p>
+                    <div id="task-list" class="task-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="planner.js" defer></script>
+</body>
+</html>
